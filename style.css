@@ -1,0 +1,87 @@
+:root {
+  --bg: #0f1320;
+  --fg: #e6e9ef;
+  --muted: #a5adcb;
+  --primary: #7aa2f7;
+  --card: #151a2e;
+  --border: #26314f;
+  --accent: #f7768e;
+  --green: #9ece6a;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(21, 26, 46, 0.6);
+  backdrop-filter: blur(6px);
+  position: sticky; top: 0; z-index: 10;
+}
+
+.site-header h1 a { color: var(--fg); }
+.site-header nav a { margin-right: 1rem; color: var(--muted); }
+.site-header nav a:hover { color: var(--fg); }
+
+.intro p { color: var(--muted); }
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.post-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+.post-card:hover { transform: translateY(-2px); border-color: var(--primary); }
+.post-card h3 { margin: 0 0 0.4rem; }
+.meta { color: var(--muted); font-size: 0.9rem; }
+
+.post {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.post h2 { margin-top: 0; }
+.post-content h3 { margin-top: 1.5rem; }
+.post-content ul { padding-left: 1.2rem; }
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #1a2036;
+  color: var(--fg);
+}
+.button:hover { border-color: var(--primary); }
+
+.site-footer {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem 0;
+}
